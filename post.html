@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>投稿フォーム</title>
+  </head>
+  <body>
+    <form method="POST" action="insert.php">
+      <p>
+        名前：<br>
+        <input type="text" name="name" size="40"><br>
+        メールアドレス：<br>
+        <input type="text" name="mail" size="40"><br>
+        タイトル：<br>
+        <input type="text" name="title" size="40"><br>
+        コメント：<br>
+        <textarea name="message" rows="10" cols="60"></textarea><br>
+        <input type="submit" value="投稿"><input type="reset" value="リセット">
+      </p>
+    </form>
+  </body>
+</html>
