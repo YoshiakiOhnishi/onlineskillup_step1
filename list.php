@@ -46,6 +46,8 @@
       $mysqli->close();
       ?>
     </table>
-    <a href="post.html">投稿画面ヘ移動</a>
+    <p>
+      <a href="post.html">投稿画面ヘ移動</a>
+    </p>
   </body>
 </html>
