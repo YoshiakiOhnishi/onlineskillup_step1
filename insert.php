@@ -12,9 +12,8 @@ if ($mysqli->connect_error){
   print("接続失敗：" . $mysqli->connect_error);
   exit();
 }
-//プリペアドステートメントを作成　ユーザ入力を使用する箇所は?にしておく
+//プリペアドステートメントを作成
 $stmt = $mysqli->prepare("INSERT INTO data (name, mail, message, title) VALUES (?, ?, ?, ?)");
-//$_POST["name"]に名前が、$_POST["message"]に本文が格納されているとする。
 //?の位置に値を割り当てる
 $stmt->bind_param('ssss', $_POST["name"], $_POST["mail"], $_POST["message"], $_POST["title"]);
 //実行

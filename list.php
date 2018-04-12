@@ -5,7 +5,7 @@
   </head>
   <body>
     <table border="1">
-      <tr><th>名前</th><th>メールアドレス</th><th>タイトル</th><th>本文</th><th>投稿時間</th><tr>
+      <tr><th>名前</th><th>メールアドレス</th><th>タイトル</th><th>本文</th><th>投稿時間</th><th>削除</th><tr>
       <?php
       //mysqliクラスのオブジェクトを作成
       if($_SERVER['SERVER_NAME'] == "localhost") {
@@ -38,8 +38,9 @@
           print('<td>'.$title.'</td>');
           print('<td>'.$message.'</td>');
           print('<td>'.$created.'</td>');
+          //削除を押したレコードを削除
+          print('<td><a href="delete.php?name='.$name.'&created='.$created.'">削除</a></td>');
           print('</tr>');
-          //print("$name : $mail : $title : $message ($created)<br>");
         }
       }
       $mysqli->close();
